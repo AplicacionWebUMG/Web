@@ -1,0 +1,49 @@
+{
+    "usuarios":[
+        {
+            "id": 1,
+            "username": "Abby",
+            "email": "abby@io.com",
+            "perfil":
+                {
+                    "id": 1
+                }
+        },
+        {
+            "id": 2,
+            "username": "Rudy",
+            "email": "rudy@io.com",
+            "perfil":
+                {
+                    "id": 2
+                }
+        },
+        {
+            "id": 3,
+            "username": "Freddie",
+            "email": "freddie@io.com",
+            "perfil":
+                {
+                    "id": 3
+                }
+        },
+        {
+            "id": 4,
+            "username": "Sara",
+            "email": "sara@io.com",
+            "perfil":
+                {
+                    "id": 4
+                }
+        },
+        {
+            "id": 5,
+            "username": "Peter",
+            "email": "peter@io.com",
+            "perfil":
+                {
+                    "id": 5
+                }
+        }
+    ]
+}

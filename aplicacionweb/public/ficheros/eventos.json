@@ -1,0 +1,196 @@
+{
+    "eventos":[
+        {
+            "id": 1,
+            "nombre": "Hellfest",
+            "afiche": "./img/eventos/hellfest.jpg",
+            "fecha": "15/02/2020", 
+            "hora": "16:30:00",
+            "lugar": "X6CC+PH San Pedro Sacatepequez",
+            "disponible": "Si",
+            "localidades":[
+                {
+                    "tipo": "platea",
+                    "asientos_totales": 20,
+                    "asientos_disponibles": 15,
+                    "costo": "Q150.00"
+                },
+                {
+                    "tipo": "anfiteatro",
+                    "asientos_totales": 30,
+                    "asientos_disponibles": 5,
+                    "costo": "Q120.00"
+                },
+                {
+                    "tipo": "paraiso",
+                    "asientos_totales": 40,
+                    "asientos_disponibles": 25,
+                    "costo": "Q100.00"
+                }
+            ],
+            "organizadores": "HellFest",
+            "valoración": 7,
+            "comentarios":[
+                {
+                    "id": 1,
+                    "username": "Abby",
+                    "comment": "Me ha parecido una tremenda sorpresa!"
+                },
+                {
+                    "id": 2,
+                    "username": "Abby",
+                    "comment": "Pero, pensándolo bien, creo que ha costado menos de lo que debería."
+                },
+                {
+                    "id": 3,
+                    "username": "Sara",
+                    "comment": "Tuvo todo y más de lo que habría imaginado y pedido. Excelente."
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "nombre": "Internacionales Conejos",
+            "afiche": "./img/eventos/conejos.jpg",
+            "fecha": "15/02/2020", 
+            "hora": "16:30:00",
+            "lugar": "X6CC+PH San Pedro Sacatepequez",
+            "disponible": "Si",
+            "localidades":[
+                {
+                    "tipo": "platea",
+                    "asientos_totales": 20,
+                    "asientos_disponibles": 15,
+                    "costo": "Q150.00"
+                },
+                {
+                    "tipo": "anfiteatro",
+                    "asientos_totales": 30,
+                    "asientos_disponibles": 5,
+                    "costo": "Q120.00"
+                },
+                {
+                    "tipo": "paraiso",
+                    "asientos_totales": 40,
+                    "asientos_disponibles": 25,
+                    "costo": "Q100.00"
+                }
+            ],
+            "organizadores": "HellFest",
+            "valoración": 7,
+            "comentarios":[
+                {
+                    "id": 1,
+                    "username": "Abby",
+                    "comment": "Me ha parecido una tremenda sorpresa!"
+                },
+                {
+                    "id": 2,
+                    "username": "Abby",
+                    "comment": "Pero, pensándolo bien, creo que ha costado menos de lo que debería."
+                },
+                {
+                    "id": 3,
+                    "username": "Sara",
+                    "comment": "Tuvo todo y más de lo que habría imaginado y pedido. Excelente."
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "nombre": "Miel San Marcos",
+            "afiche": "./img/eventos/miel.jpg",
+            "fecha": "15/02/2020", 
+            "hora": "16:30:00",
+            "lugar": "X6CC+PH San Pedro Sacatepequez",
+            "disponible": "Si",
+            "localidades":[
+                {
+                    "tipo": "platea",
+                    "asientos_totales": 20,
+                    "asientos_disponibles": 15,
+                    "costo": "Q150.00"
+                },
+                {
+                    "tipo": "anfiteatro",
+                    "asientos_totales": 30,
+                    "asientos_disponibles": 5,
+                    "costo": "Q120.00"
+                },
+                {
+                    "tipo": "paraiso",
+                    "asientos_totales": 40,
+                    "asientos_disponibles": 25,
+                    "costo": "Q100.00"
+                }
+            ],
+            "organizadores": "HellFest",
+            "valoración": 7,
+            "comentarios":[
+                {
+                    "id": 1,
+                    "username": "Abby",
+                    "comment": "Me ha parecido una tremenda sorpresa!"
+                },
+                {
+                    "id": 2,
+                    "username": "Abby",
+                    "comment": "Pero, pensándolo bien, creo que ha costado menos de lo que debería."
+                },
+                {
+                    "id": 3,
+                    "username": "Sara",
+                    "comment": "Tuvo todo y más de lo que habría imaginado y pedido. Excelente."
+                }
+            ]
+        },
+        {
+            "id":4,
+            "nombre": "Internacionales Conejos",
+            "afiche": "./img/eventos/paulo.jpg",
+            "fecha": "15/02/2020", 
+            "hora": "16:30:00",
+            "lugar": "X6CC+PH San Pedro Sacatepequez",
+            "disponible": "Si",
+            "localidades":[
+                {
+                    "tipo": "platea",
+                    "asientos_totales": 20,
+                    "asientos_disponibles": 15,
+                    "costo": "Q150.00"
+                },
+                {
+                    "tipo": "anfiteatro",
+                    "asientos_totales": 30,
+                    "asientos_disponibles": 5,
+                    "costo": "Q120.00"
+                },
+                {
+                    "tipo": "paraiso",
+                    "asientos_totales": 40,
+                    "asientos_disponibles": 25,
+                    "costo": "Q100.00"
+                }
+            ],
+            "organizadores": "HellFest",
+            "valoración": 7,
+            "comentarios":[
+                {
+                    "id": 1,
+                    "username": "Abby",
+                    "comment": "Me ha parecido una tremenda sorpresa!"
+                },
+                {
+                    "id": 2,
+                    "username": "Abby",
+                    "comment": "Pero, pensándolo bien, creo que ha costado menos de lo que debería."
+                },
+                {
+                    "id": 3,
+                    "username": "Sara",
+                    "comment": "Tuvo todo y más de lo que habría imaginado y pedido. Excelente."
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,60 @@
+{
+    "perfiles":[
+        {
+            "foto": "./img/usuarios/abby.jpg",
+            "biografia": "Soy una persona elocuente.",
+            "genero": "Femenino",
+            "eventos_valorados": 2,
+            "usuario": [
+                {
+                    "id": 1,
+                    "username": "Abby",
+                    "email": "abby@io.com"
+                    
+                }
+            ]
+        },
+        {
+            "foto": "./img/usuarios/abby.jpg",
+            "biografia": "Soy una persona elocuente.",
+            "genero": "Femenino",
+            "eventos_valorados": 2,
+            "usuario": [
+                {
+                    "id": 2,
+                    "username": "Rudy",
+                    "email": "abby@io.com"
+                    
+                }
+            ]
+        },
+        {
+            "foto": "./img/usuarios/abby.jpg",
+            "biografia": "Soy una persona elocuente.",
+            "genero": "Femenino",
+            "eventos_valorados": 2,
+            "usuario": [
+                {
+                    "id": 3,
+                    "username": "Freddie",
+                    "email": "abby@io.com"
+                    
+                }
+            ]
+        },
+        {
+            "foto": "./img/usuarios/abby.jpg",
+            "biografia": "Soy una persona elocuente.",
+            "genero": "Femenino",
+            "eventos_valorados": 2,
+            "usuario": [
+                {
+                    "id": 4,
+                    "username": "sara",
+                    "email": "abby@io.com"
+                    
+                }
+            ]
+        }
+    ]
+}

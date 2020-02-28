@@ -1,0 +1,100 @@
+{
+    "reservas":[
+        {
+            "evento":[
+                {
+                    "id": 1,
+                    "nombre": "Hellfest",
+                    "fecha": "15/02/2020", 
+                    "hora": "16:30:00",
+                    "localidades":[
+                        {
+                            "tipo": "platea",
+                            "reservado": 5
+                        },
+                        {
+                            "tipo": "anfiteatro",
+                            "reservado": 25
+                        },
+                        {
+                            "tipo": "paraiso",
+                            "reservado": 15
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "evento":[
+                {
+                    "id": 2,
+                    "nombre": "Internacionales conejos",
+                    "fecha": "15/02/2020", 
+                    "hora": "16:30:00",
+                    "localidades":[
+                        {
+                            "tipo": "platea",
+                            "reservado": 5
+                        },
+                        {
+                            "tipo": "anfiteatro",
+                            "reservado": 25
+                        },
+                        {
+                            "tipo": "paraiso",
+                            "reservado": 15
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "evento":[
+                {
+                    "id": 3,
+                    "nombre": "Miel San Marcos ",
+                    "fecha": "15/02/2020", 
+                    "hora": "16:30:00",
+                    "localidades":[
+                        {
+                            "tipo": "platea",
+                            "reservado": 5
+                        },
+                        {
+                            "tipo": "anfiteatro",
+                            "reservado": 25
+                        },
+                        {
+                            "tipo": "paraiso",
+                            "reservado": 15
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "evento":[
+                {
+                    "id": 4,
+                    "nombre": "Paulo Londra",
+                    "fecha": "15/02/2020", 
+                    "hora": "16:30:00",
+                    "localidades":[
+                        {
+                            "tipo": "platea",
+                            "reservado": 5
+                        },
+                        {
+                            "tipo": "anfiteatro",
+                            "reservado": 25
+                        },
+                        {
+                            "tipo": "paraiso",
+                            "reservado": 15
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

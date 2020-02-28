@@ -1,0 +1,84 @@
+{
+    "historial":[
+        {
+            "id": 1,
+            "fecha": "15/02/2020", 
+            "evento": [
+                {
+                    "id": 1,
+                    "nombre": "Evento1",
+                    "fecha": "15/02/2020", 
+                    "hora": "16:30:00",
+                    "lugar": "X6CC+PH San Pedro Sacatepequez"
+                }
+            ],
+            "usuarios": [
+                {
+                    "id": 1,
+                    "username": "Abby",
+                    "email": "abby@io.com"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "fecha": "15/02/2020", 
+            "evento": [
+                {
+                    "id": 2,
+                    "nombre": "Evento2",
+                    "fecha": "15/02/2020", 
+                    "hora": "16:30:00",
+                    "lugar": "X6CC+PH San Pedro Sacatepequez"
+                }
+            ],
+            "usuarios": [
+                {
+                    "id": 1,
+                    "username": "Abby",
+                    "email": "abby@io.com"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "fecha": "15/02/2020", 
+            "evento": [
+                {
+                    "id": 3,
+                    "nombre": "Evento3",
+                    "fecha": "15/02/2020", 
+                    "hora": "16:30:00",
+                    "lugar": "X6CC+PH San Pedro Sacatepequez"
+                }
+            ],
+            "usuarios": [
+                {
+                    "id": 1,
+                    "username": "Abby",
+                    "email": "abby@io.com"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "fecha": "15/02/2020", 
+            "evento": [
+                {
+                    "id": 4,
+                    "nombre": "Evento4",
+                    "fecha": "15/02/2020", 
+                    "hora": "16:30:00",
+                    "lugar": "X6CC+PH San Pedro Sacatepequez"
+                }
+            ],
+            "usuarios": [
+                {
+                    "id": 1,
+                    "username": "Abby",
+                    "email": "abby@io.com"
+                }
+            ]
+        }
+    ]
+}
