@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import StaticSite from './Router';
+
 
 class Login extends Component{ 
 

@@ -55,7 +55,7 @@ import {
       </nav>
         
         <Route path="/home" component={Home} />
-        <Route path="/usuarios" component={Usuarios} usuarios={this.props.users.usuarios} />
+        <Route path="/usuarios" component={Usuarios}/>
         <Route path="/eventos" component={Eventos} />
         <Route path="/login" component={Login} />
            </div>
