@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import log from '../img/log.png';
 
 class Login extends Component{ 
 
@@ -17,7 +17,7 @@ render(){
         <div className="col-sm-9 col-md-7 col-lg-5 mx-auto">
           <div className="card card-signin my-5">
             <div className="card-body">
-                <img className="mb-4" src="./img/log.png" alt="logo" width="400" height="400"/>
+                <img className="mb-4" src={log} alt="logo" width="400" height="400"/>
               <form className="form-signin">
                 <div className="form-label-group">
                   <input type="text" class="form-control" placeholder="Usuario" required autofocus/>

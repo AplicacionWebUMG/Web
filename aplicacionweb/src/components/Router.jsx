@@ -3,7 +3,8 @@ import Home from './Home';
 import Usuarios from './Usuarios';
 import Eventos from './Eventos';
 import Login from './Login';
-
+import ia from '../img/ia.jpg';
+import imw from '../img/imw.jpg';
 import {
     BrowserRouter as Router,
     Switch,
@@ -54,6 +55,24 @@ import {
 
       </nav>
         
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src={ia} alt="First slide"/>
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src={imw} alt="Second slide"/>
+      </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+    </div>
+  </div>
         <Route path="/home" component={Home} />
         <Route path="/usuarios" component={Usuarios}/>
         <Route path="/eventos" component={Eventos} />
