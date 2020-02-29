@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Usuarios from '../ficheros/usuarios.json';
+
 
 class ListUsuarios extends Component{
 
@@ -9,22 +9,35 @@ class ListUsuarios extends Component{
        
     }
 
-    
+    componentDidMount(){
+        fetch('./ficheros/usuarios.json')
+        .then(response => {return response.json()})
+        .then(usuarios => {this.setState({usuarios: usuarios.usuarios})})
+    }
     
 render(){
     
     return(
 
         <div>
-            <div><h1>Usuarios</h1></div>
-          <div>
-          {
-              Usuarios.usuarios.map(item =>{
-              return <h1>{item.username}</h1>
-              })
-              
-          }
-          </div>
+            <h1>Usuarios</h1>
+            {
+                        this.state.usuarios.map(users => {
+                            return(
+                                <div>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <th> {users.id}. </th>
+                                                <th> {users.username} </th>
+                                                <th> {users.email} </th>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            )
+                        })
+                    }
         </div>
         
     )
