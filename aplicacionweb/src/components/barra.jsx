@@ -1,9 +1,8 @@
-import React, { Component } from 'react';
-import Home from './Home';
-import Usuarios from './Usuarios';
-import Eventos from './Eventos';
-import Login from './Login';
-
+import React from 'react';
+import './Home';
+import './Usuarios';
+import './Eventos';
+import './Login';
 import {
     BrowserRouter as Router,
     Switch,
@@ -13,16 +12,10 @@ import {
     withRouter
   } from "react-router-dom";
 
-  class StaticSite extends Component {
-
-    constructor(...props){
-      super(...props)
-    }
-      render(){
-        return(
-          <Router>
+  const Barra = () => (
+      <Router>
        <div>
-       <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+          <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -53,15 +46,8 @@ import {
         
 
       </nav>
-        
-        <Route path="/home" component={Home} />
-        <Route path="/usuarios" component={Usuarios} usuarios={this.props.users.usuarios} />
-        <Route path="/eventos" component={Eventos} />
-        <Route path="/login" component={Login} />
            </div>
       </Router>
-        )
-      }
       
-    }
-  export default StaticSite
+  )
+  export default Barra
