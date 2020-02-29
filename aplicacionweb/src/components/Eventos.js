@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-
+import ListEventos from './ListEventos';
 class Eventos extends Component{
 
 render(){
     return(
         <div>
-            <h2>Pestaña eventos</h2>
+            <ListEventos ></ListEventos>
         </div>
 
     )
