@@ -5,7 +5,7 @@ class ListPagos extends Component{
 
     constructor(...props){
         super(...props)
-        this.state={Pagos:[]}
+        this.state={pagos:[]}
        
     }
 
@@ -33,7 +33,7 @@ class ListPagos extends Component{
                                                     <th> {pay.total} </th>
                                                     <th> {pay.cancelar}. </th>
                                                     <th> {pay.pagado} </th>
-                                                    <th> {pay.usuario} </th>
+                                                   
                                                  
                                                 </tr>
                                             </tbody>

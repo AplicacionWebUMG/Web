@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Home from './Home';
 import Usuarios from './Usuarios';
 import Eventos from './Eventos';
+import Pagos from './Pagos';
 import Login from './Login';
 import ia from '../img/ia.jpg';
 import imw from '../img/imw.jpg';
@@ -35,6 +36,9 @@ import {
             </li>
             <li className="nav-item">
             <Link className="nav-link" to='/eventos'>Eventos</Link>
+            </li>
+            <li className="nav-item">
+            <Link className="nav-link" to='/pagos'>Pagos</Link>
             </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">
@@ -77,6 +81,7 @@ import {
         <Route path="/usuarios" component={Usuarios}/>
         <Route path="/eventos" component={Eventos} />
         <Route path="/login" component={Login} />
+        <Route path="/pagos" component={Pagos} />
            </div>
       </Router>
         )
