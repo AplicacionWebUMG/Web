@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
+import MapContainer from './GoogleMaps';
 
 class Home extends Component{
 
 render(){
     return(
         <div>
-            <h2>Pestaña home</h2>
+           
+                <MapContainer></MapContainer>
+         
         </div>
 
     )
