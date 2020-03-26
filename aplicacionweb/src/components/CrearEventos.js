@@ -30,6 +30,7 @@ render(){
                                  <div class="card-body">   
                                     <form>
                                         <h6 class="heading-small text-muted mb-4">Informacion del evento</h6>
+                                        <h1>hola</h1>
                                             <div class="pl-lg-4">
                                                 <div class="row">
                                                     <div class="col-lg-6">
