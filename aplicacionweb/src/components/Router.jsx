@@ -1,11 +1,24 @@
 import React, { Component } from 'react';
 import Home from './Home';
-import Usuarios from './Usuarios';
-import Eventos from './Eventos';
+import CrearEventos from './CrearEventos';
+import ListEventos from './ListEventos';
 import Pagos from './Pagos';
 import Login from './Login';
-import ia from '../img/ia.jpg';
-import imw from '../img/imw.jpg';
+
+
+// import '../assets/vendor/nucleo/css/nucleo.css'
+// import '../assets/vendor/@fortawesome/fontawesome-free/css/all.min.css'
+// import '../assets/css/argon.css?v=1.1.0'
+
+
+// import '../assets/vendor/jquery/dist/jquery.min'
+// import '../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min'
+// import '../assets/vendor/js-cookie/js.cookie'
+// import '../assets/vendor/jquery.scrollbar/jquery.scrollbar.min'
+// import '../assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min'
+// import '../assets/js/argon?v=1.1.0'
+
+
 import {
     BrowserRouter as Router,
     Switch,
@@ -24,6 +37,7 @@ import {
         return(
           <Router>
        <div>
+     
        <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -32,10 +46,10 @@ import {
         <Link className="navbar-brand" to='/home'>EVENTS</Link>
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li className="nav-item">
-            <Link className="nav-link" to='/usuarios'>Usuarios</Link>
+            <Link className="nav-link" to='/creareventos'>Crear evento</Link>
             </li>
             <li className="nav-item">
-            <Link className="nav-link" to='/eventos'>Eventos</Link>
+            <Link className="nav-link" to='/vereventos'>Ver eventos</Link>
             </li>
             <li className="nav-item">
             <Link className="nav-link" to='/pagos'>Pagos</Link>
@@ -59,30 +73,14 @@ import {
 
       </nav>
         
-      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img class="d-block w-100" src={ia} alt="First slide"/>
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100" src={imw} alt="Second slide"/>
-      </div>
-    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-    </div>
-  </div>
+ 
         <Route path="/home" component={Home} />
-        <Route path="/usuarios" component={Usuarios}/>
-        <Route path="/eventos" component={Eventos} />
+        <Route path="/creareventos" component={CrearEventos}/>
+        <Route path="/vereventos" component={ListEventos} />
         <Route path="/login" component={Login} />
         <Route path="/pagos" component={Pagos} />
            </div>
+           
       </Router>
         )
       }
