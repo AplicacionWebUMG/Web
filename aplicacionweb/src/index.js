@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import StaticSite from './components/Router';
+import MapContainer from './components/GoogleMaps';
 import * as serviceWorker from './serviceWorker';
 import './includes/bootstrap';
 
