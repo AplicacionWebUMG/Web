@@ -6,12 +6,12 @@ class CrearEventos extends Component{
 
             this.state = {
                 nombre: "",
-                // fecha: "",
-                // hora: "",
+                 fecha: "",
+                hora: "",
                 lugar: "",
                 // tipo: 0,
                 // asientos: "",
-                // estado: 0,
+                 estado: 0,
                 organizadores: "",
                 // costo: 0
     }
@@ -39,12 +39,18 @@ render(){
                                                             <input type="text" id="nombre" className="form-control" placeholder="Nombre del evento" value={this.state.nombre} onChange={this.NombreInputChange.bind(this)} />  
 
                                                         </div>
-                                                        {/* <div className="col-lg-6">
+                                                        <div className="col-lg-6">
                                                             <div className="form-group">
-                                                                <label className="form-control-label" for="input-fecha">fecha</label>
-                                                                <input type="datetime-local" id="fecha" className="form-control"  value={this.state.fecha} onChange={this.FechaInputChange.bind(this)}/>
+                                                                <label className="form-control-label" htmlFor="input-fecha">fecha</label>
+                                                                <input type="date" id="fecha" className="form-control"  value={this.state.fecha} onChange={this.FechaInputChange.bind(this)}/>
                                                             </div>
-                                                        </div> */}
+                                                        </div>
+                                                        <div className="col-lg-6">
+                                                            <div className="form-group">
+                                                                <label className="form-control-label" htmlFor="input-hora">hora</label>
+                                                                <input type="time" id="hora" className="form-control"  value={this.state.hora} onChange={this.HoraInputChange.bind(this)}/>
+                                                            </div>
+                                                        </div>
                                                         <div className="col-lg-4">
                                                             <div className="form-group">
                                                                 <label className="form-control-label" htmlFor="input-lugar">Lugar</label>
@@ -52,15 +58,15 @@ render(){
                                                             </div>
                                                         </div>
 
-                                                        {/* <div className="col-lg-4">
+                                                        <div className="col-lg-4">
                                                             <div className="form-group">
-                                                                <label className="form-control-label" for="input-date">Estado del evento</label>
-                                                                <select classNameName="form-control" id="estado" value={this.state.estado} onChange={this.EstadoInputChange.bind(this)} >
-                                                                    <option value={1} >asiento libre</option>
-                                                                    <option value={3} >asiento ocupado</option>
+                                                                <label className="form-control-label" htmlFor="input-date">Estado del evento</label>
+                                                                <select className="form-control" id="estado" value={this.state.estado} onChange={this.EstadoInputChange.bind(this)} >
+                                                                    <option value={0} >Evento Inactivo</option>
+                                                                    <option value={1} >Evento Activo</option>
                                                                 </select>
                                                             </div>
-                                                         </div>     */}
+                                                         </div>    
                                                          
                                                     <div className="col-md-12">
                                                         <div className="form-group">
@@ -121,16 +127,21 @@ LugarInputChange(e){
         lugar: e.target.value
     })
 }
-// FechaInputChange(e){
-//     this.setState({
-//         fecha: e.target.value
-//     })
-// }
-// EstadoInputChange(e){
-//     this.setState({
-//         estado: e.target.value
-//     })
-// }
+ FechaInputChange(e){
+     this.setState({
+         fecha: e.target.value
+     })
+ }
+ HoraInputChange(e){
+    this.setState({
+        hora: e.target.value
+    })
+}
+ EstadoInputChange(e){
+     this.setState({
+         estado: e.target.value
+     })
+ }
 // TipoInputChange(e){
 //     this.setState({
 //         tipo: e.target.value
@@ -151,8 +162,9 @@ generarObjeto(){
     const objeto ={
         nombre:this.state.nombre,
         lugar:this.state.lugar,
-        //fecha: this.state.fecha,
-        //estado: this.state.estado,
+        fecha: this.state.fecha,
+        hora: this.state.hora,
+        estado: this.state.estado,
        // costo: this.state.costo,
         //tipo: this.state.tipo,
         organizadores: this.state.organizadores
