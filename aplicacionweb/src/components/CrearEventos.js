@@ -1,10 +1,15 @@
 import React, {Component} from 'react';
+// const noop = ()=> {};
+// const FileInput =({value,onChange = noop,...rest})
 
 class CrearEventos extends Component{
     constructor(...props) {
         super(...props);
-
+        this.onSubmit = this.onSubmit.bind (this); 
+         this.fileInput =React.createRef();
+         
             this.state = {
+                afiche: null,
                 nombre: "",
                  fecha: "",
                 hora: "",
@@ -14,8 +19,20 @@ class CrearEventos extends Component{
                  estado: 0,
                 organizadores: "",
                 // costo: 0
+                
+            
+
     }
+    
+
 }
+//  onSubmit(event) {
+//      event.preventDefault();
+//      alert(
+//        `Selected file - ${this.fileInput.current.files[0].afiche}`
+//      );
+//    }
+
 render(){
     return(
         <div>
@@ -34,6 +51,12 @@ render(){
                                             <div className="pl-lg-4">
                                                 <div className="row">
                                                     <div className="col-lg-6">
+                                                        <div>
+                                                        
+                                                             <input type="file" id="afiche"   ref={this.fileInput}  />
+                                                            {/* <input type = "file" onChange = {(e) => this.handleChange (e.target.files)} />  */}
+                                                        </div> 
+                                                           
                                                         <div className="form-group">
                                                             <label className="form-control-label" htmlFor="nombre-evento">Nombre del evento</label>
                                                             <input type="text" id="nombre" className="form-control" placeholder="Nombre del evento" value={this.state.nombre} onChange={this.NombreInputChange.bind(this)} />  
@@ -115,8 +138,18 @@ render(){
             
           
         </div>
+        
     )
+   
+     
 }
+    
+   fileInput(e){
+      this.setState({
+          afiche: e.target.value
+     }) 
+  }
+
 NombreInputChange(e){
     this.setState({
         nombre: e.target.value
@@ -160,6 +193,7 @@ OrganizadoresInputChange(e){
 }
 generarObjeto(){
     const objeto ={
+        afiche:this.state.afiche,
         nombre:this.state.nombre,
         lugar:this.state.lugar,
         fecha: this.state.fecha,
@@ -179,7 +213,9 @@ onSubmit (e) {
             'Content-Type': 'application/json' 
             },
         body: this.generarObjeto()
+        
     })
+
     .then(res => res.json())
     .then(res => {
       if (res.success) {
@@ -187,7 +223,14 @@ onSubmit (e) {
         }
     });
     e.preventDefault();
+    alert(
+        `Selected file - ${this.fileInput.current.files[0].name}`
+      );
+    
 }
 
+
 }
+
+
 export default CrearEventos

@@ -3,6 +3,7 @@ import Home from './Home';
 import CrearEventos from './CrearEventos';
 import ListEventos from './ListEventos';
 import Pagos from './Pagos';
+// import App from './App';
 
 import Login from './Login';
 
@@ -52,6 +53,9 @@ import {
             <li className="nav-item">
             <Link className="nav-link" to='/vereventos'>Ver eventos</Link>
             </li>
+            {/* <li className="nav-item">
+            <Link className="nav-link" to='/App'>App</Link>
+            </li> */}
             <li className="nav-item">
             <Link className="nav-link" to='/pagos'>Pagos</Link>
             </li>
@@ -77,6 +81,7 @@ import {
  
         <Route path="/home" component={Home} />
         <Route path="/creareventos" component={CrearEventos}/>
+        {/* <Route path="/App" component={App}/> */}
         <Route path="/vereventos" component={ListEventos} />
         <Route path="/login" component={Login} />
         <Route path="/pagos" component={Pagos} />
