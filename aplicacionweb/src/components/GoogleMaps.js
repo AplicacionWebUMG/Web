@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { Map, GoogleApiWrapper, InfoWindow, Marker } from 'google-maps-react';
 
 const mapStyles = {
-  width: '100%',
-  height: '100%'
+  width: '95%',
+  height: '30%'
 };
 
 export class MapContainer extends Component {
@@ -15,7 +15,9 @@ export class MapContainer extends Component {
   this.setState({
     selectedPlace: props,
     activeMarker: marker,
-    showingInfoWindow: true
+    showingInfoWindow: true,
+    lat: this.props.lat,
+    lng: this.props.lng
   });
 
 onClose = props => {
@@ -27,14 +29,15 @@ onClose = props => {
   }
 };
   render() {
+   
     return (
       <Map
         google={this.props.google}
         zoom={8}
         style={mapStyles}
         initialCenter={{
-         lat: -1.2884,
-         lng: 36.8233
+         lat:14.963082,
+         lng: -91.8187687
         }}
       >
       <Marker

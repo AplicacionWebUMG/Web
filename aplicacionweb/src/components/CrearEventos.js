@@ -1,5 +1,9 @@
 import React, {Component} from 'react';
+import Places from './Places';
+import MapContainer from './GoogleMaps';
 
+
+import  LocationSearchInput from './Map';
 class CrearEventos extends Component{
     constructor(...props) {
         super(...props);
@@ -15,11 +19,16 @@ class CrearEventos extends Component{
                 organizadores: "",
                 // costo: 0
     }
+  
 }
+
+
+
 render(){
     return(
+        
         <div>
-           
+        {/* <LocationSearchInput ObtenerLugar={this.ObtenerLugar}/> */}
 
             <div className="container-fluid mt--6">
                 <div className="row">
@@ -33,33 +42,57 @@ render(){
                                         
                                             <div className="pl-lg-4">
                                                 <div className="row">
-                                                    <div className="col-lg-6">
+                                                    <div className="col-md-6">
                                                         <div className="form-group">
                                                             <label className="form-control-label" htmlFor="nombre-evento">Nombre del evento</label>
                                                             <input type="text" id="nombre" className="form-control" placeholder="Nombre del evento" value={this.state.nombre} onChange={this.NombreInputChange.bind(this)} />  
 
                                                         </div>
-                                                        <div className="col-lg-6">
+                                                    </div>
+                                                        <div className="col-md-2">
                                                             <div className="form-group">
                                                                 <label className="form-control-label" htmlFor="input-fecha">fecha</label>
                                                                 <input type="date" id="fecha" className="form-control"  value={this.state.fecha} onChange={this.FechaInputChange.bind(this)}/>
                                                             </div>
                                                         </div>
-                                                        <div className="col-lg-6">
+                                                        <div className="col-md-2">
                                                             <div className="form-group">
                                                                 <label className="form-control-label" htmlFor="input-hora">hora</label>
                                                                 <input type="time" id="hora" className="form-control"  value={this.state.hora} onChange={this.HoraInputChange.bind(this)}/>
                                                             </div>
                                                         </div>
-                                                        <div className="col-lg-4">
+                                                 </div>
+                                                 <div className="col-lg-4">
                                                             <div className="form-group">
                                                                 <label className="form-control-label" htmlFor="input-lugar">Lugar</label>
-                                                                <input type="text" id="lugar" className="form-control" placeholder="Cayala-Ciudad de Guatemala" value={this.state.lugar} onChange={this.LugarInputChange.bind(this)}/>
+                                                                <input type="text" id="lugar" className="form-control" placeholder="Ingrese la direccion" value={this.state.lugar} onChange={this.LugarInputChange.bind(this)}/>
                                                             </div>
-                                                        </div>
-
+                                                        </div>  
+                                                 <div className="col-md-6">
+                                                      <div className="form-group">
+                                                      <label className="form-control-label" htmlFor="input-date">Lugar del evento
+                                                      </label>
+                                                      <Places ></Places>
+                                                        
+                                                        
+                                                      </div>
+                                                 </div>
+                                                 
+                                                 <MapContainer></MapContainer>
+                                                
                                                         <div className="col-lg-4">
                                                             <div className="form-group">
+                                                            <br></br>
+                                                        <br></br>
+                                                        <br></br>
+                                                        <br></br>
+                                                        <br></br>
+                                                        <br></br>
+                                                        <br></br>
+                                                        <br></br>
+                                                        <br></br>
+                                                        
+                                                       
                                                                 <label className="form-control-label" htmlFor="input-date">Estado del evento</label>
                                                                 <select className="form-control" id="estado" value={this.state.estado} onChange={this.EstadoInputChange.bind(this)} >
                                                                     <option value={0} >Evento Inactivo</option>
@@ -77,8 +110,8 @@ render(){
                                                
                                                
                                                 
-                                                    </div>
-                                                </div>
+                                                   
+                                                
                                                
                                             </div>
                                            

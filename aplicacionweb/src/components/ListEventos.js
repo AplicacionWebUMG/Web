@@ -3,7 +3,7 @@ import '../../node_modules/bootstrap/dist/css/bootstrap.css';
 import 'jquery';
 import 'popper.js';
 import '../../node_modules/bootstrap/dist/js/bootstrap';
-
+import EliminarEvento from './EliminarEvento';
 
 class ListEventos extends Component{
     
@@ -41,7 +41,7 @@ class ListEventos extends Component{
       </div>
     </div>
     {/* fin del titulo */}
-                
+    <EliminarEvento ></EliminarEvento>
                 {
                      this.state.eventos.map(events =>{
                         return(
@@ -54,6 +54,7 @@ class ListEventos extends Component{
                                             <table class="table align-items-center table-flush">
                                             <thead class="thead-light">
                                                 <tr>
+                                                <th scope="col">Id</th>
                                                 <th scope="col">Evento</th>
                                                 <th scope="col">Organizadores</th>
                                                 <th scope="col">Fecha del evento</th>
@@ -64,6 +65,11 @@ class ListEventos extends Component{
                                             <tbody> {/* mostrar datos  */}
                                                 <tr>
                                                 <th scope="row">
+                                                {events.id}
+                                                  
+
+                                                </th> 
+                                                <th scope="row">
                                                 {events.nombre}
                                                   
 
@@ -72,8 +78,8 @@ class ListEventos extends Component{
                                                 <td> {events.fecha}</td>
                                                 <td> {events.lugar}</td>
                                                 <td>
-                                                    <a href="#!" class="btn btn-sm btn-warning">Editar</a>
-                                                    <a href="#!" class="btn btn-sm btn-danger">Eliminar</a>
+                                                    <botton class="btn btn-sm btn-warning">Editar</botton>
+                                                   
                                                 </td>
                                                 
                                                 </tr>
@@ -92,6 +98,8 @@ class ListEventos extends Component{
                         
                     )
                 })}
+
+                
             </div>
             
         )
