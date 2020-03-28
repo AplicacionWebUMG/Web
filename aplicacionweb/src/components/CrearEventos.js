@@ -3,7 +3,7 @@ import Places from './Places';
 import MapContainer from './GoogleMaps';
 
 
-import  LocationSearchInput from './Map';
+
 class CrearEventos extends Component{
     constructor(...props) {
         super(...props);
