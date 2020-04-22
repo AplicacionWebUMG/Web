@@ -3,7 +3,6 @@ import Places from './Places';
 import MapContainer from './GoogleMaps';
 
 
-
 class CrearEventos extends Component{
     constructor(...props) {
         super(...props);
@@ -32,130 +31,150 @@ render(){
     return(
         
         <div>
-        {/* <LocationSearchInput ObtenerLugar={this.ObtenerLugar}/> */}
-
-            <div className="container-fluid mt--6">
-                <div className="row">
-                    <div className="col">
-                         <div className="card">
-            
-                             <div className="table-responsive">
-                                 <div className="card-body">   
-                                 <form onSubmit={this.onSubmit.bind(this)}>
-                                        <h6 className="heading-small text-muted mb-4">Informacion del evento</h6>
-                                        
-                                            <div className="pl-lg-4">
-                                                <div className="row">
-                                                    <div className="col-md-6">
-                                                    <div>
-                                                        
-                                                        <input type="file" id="afiche"   ref={this.fileInput}  />
-                                                       {/* <input type = "file" onChange = {(e) => this.handleChange (e.target.files)} />  */}
-                                                   </div> 
-                                                        <div className="form-group">
-                                                            <label className="form-control-label" htmlFor="nombre-evento">Nombre del evento</label>
-                                                            <input type="text" id="nombre" className="form-control" placeholder="Nombre del evento" value={this.state.nombre} onChange={this.NombreInputChange.bind(this)} />  
-
-                                                        </div>
-                                                    </div>
-                                                        <div className="col-md-2">
-                                                            <div className="form-group">
-                                                                <label className="form-control-label" htmlFor="input-fecha">fecha</label>
-                                                                <input type="date" id="fecha" className="form-control"  value={this.state.fecha} onChange={this.FechaInputChange.bind(this)}/>
-                                                            </div>
-                                                        </div>
-                                                        <div className="col-md-2">
-                                                            <div className="form-group">
-                                                                <label className="form-control-label" htmlFor="input-hora">hora</label>
-                                                                <input type="time" id="hora" className="form-control"  value={this.state.hora} onChange={this.HoraInputChange.bind(this)}/>
-                                                            </div>
-                                                        </div>
-                                                 </div>
-                                                 <div className="col-lg-4">
-                                                            <div className="form-group">
-                                                                <label className="form-control-label" htmlFor="input-lugar">Lugar</label>
-                                                                <input type="text" id="lugar" className="form-control" placeholder="Ingrese la direccion" value={this.state.lugar} onChange={this.LugarInputChange.bind(this)}/>
-                                                            </div>
-                                                        </div>  
-                                                 <div className="col-md-6">
-                                                      <div className="form-group">
-                                                      <label className="form-control-label" htmlFor="input-date">Lugar del evento
-                                                      </label>
-                                                      <Places ></Places>
-                                                        
-                                                        
-                                                      </div>
-                                                 </div>
-                                                 
-                                                 <MapContainer></MapContainer>
-                                                
-                                                        <div className="col-lg-4">
-                                                            <div className="form-group">
-                                                            <br></br>
-                                                        <br></br>
-                                                        <br></br>
-                                                        <br></br>
-                                                        <br></br>
-                                                        <br></br>
-                                                        <br></br>
-                                                        <br></br>
-                                                        <br></br>
-                                                        
-                                                       
-                                                                <label className="form-control-label" htmlFor="input-date">Estado del evento</label>
-                                                                <select className="form-control" id="estado" value={this.state.estado} onChange={this.EstadoInputChange.bind(this)} >
-                                                                    <option value={0} >Evento Inactivo</option>
-                                                                    <option value={1} >Evento Activo</option>
-                                                                </select>
-                                                            </div>
-                                                         </div>    
-                                                         
-                                                    <div className="col-md-12">
-                                                        <div className="form-group">
-                                                            <label className="form-control-label" htmlFor="input-organizadores">Organizadores</label>
-                                                            <input id="organizadores" className="form-control" placeholder="Promusa Eventos" type="text" value={this.state.organizadores} onChange={this.OrganizadoresInputChange.bind(this)}/>
-                                                        </div>
-                                                    </div>
-                                               
-                                               
-                                                
-                                                   
-                                                
-                                               
-                                            </div>
-                                           
-                                                {/* <div className="col-lg-4">
-                                                    <div className="form-group">
-                                                        <label className="form-control-label" for="input-tipo">Tipo</label>
-                                                        <select classNameName="form-control" id="tipo" value={this.state.tipo} onChange={this.TipoInputChange.bind(this)} >
-                                                            <option value={1} >1</option>
-                                                            <option value={3} >3</option>
-                                                            <option value={5} >5</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div className="col-lg-4">
-                                                    <div className="form-group">
-                                                        <label className="form-control-label" for="input-costo">Costo</label>
-                                                        <input type="number" id="costo" className="form-control" placeholder="Q."  value={this.state.costo} onChange={this.CostoInputChange.bind(this)}/>
-                                                    </div>
-                                                </div> */}
-                                                
-                                                <button type="submit" className="btn btn-primary">Enviar</button>  
-                                    </form>
-                  
-                                 </div>
-        
-                             </div>
+            <div class="header bg-primary pb-6">
+                <div class="container-fluid">
+                    <div class="header-body">
+                    <div class="row align-items-center py-4">
+                        <div class="col-lg-6 col-7">
+                        <h6 class="h2 text-white d-inline-block mb-0">Agregar evento</h6>
                         </div>
                     </div>
+                    </div>
                 </div>
+            </div>
 
+
+            <div class="container-fluid mt--6">
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            
+            <div class="table-responsive">
+              <div class="card-body">
+                <form onSubmit={this.onSubmit.bind(this)}>
+                  <h6 class="heading-small text-muted mb-4">Informacion del evento</h6>
+                  <div class="pl-lg-4">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="form-group">
+                          <label class="form-control-label" htmlFor="nombre-evento">Nombre del evento</label>
+                          <input type="text" id="input-evento" class="form-control" placeholder="Nombre del evento" value={this.state.nombre} onChange={this.NombreInputChange.bind(this)}/>
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="form-group">
+                          <label class="form-control-label" htmlFor="input-cover">Cover</label>
+                          <input type="file" id="afiche"  class="form-control" ref={this.fileInput}  />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-4">
+                        <div class="form-group">
+                          <label class="form-control-label" htmlFor="input-fecha">Fecha</label>
+                          <input type="date" id="input-fecha" className="form-control"  value={this.state.fecha} onChange={this.FechaInputChange.bind(this)}/>
+                        </div>
+                      </div>
+                      <div class="col-lg-2">
+                        <div class="form-group">
+                          <label class="form-control-label" htmlFor="input-hora">Hora</label>
+                          <input type="time" id="input-hora" className="form-control"  value={this.state.hora} onChange={this.HoraInputChange.bind(this)}/>
+                        </div>
+                      </div>
+                      <div class="col-lg-2">
+                        <div class="form-group">
+                          <label class="form-control-label" htmlFor="input-evento">Estado del evento</label>
+                          <select className="form-control" id="estadoEvento" value={this.state.estado} onChange={this.EstadoInputChange.bind(this)} >
+                            <option value={0} >Activo</option>
+                            <option value={1} >Inactivo</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label class="form-control-label" htmlFor="input-organizadores">Organizadores</label>
+                          <input id="input-organizadores" className="form-control" placeholder="Promusa Eventos" type="text" value={this.state.organizadores} onChange={this.OrganizadoresInputChange.bind(this)}/>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="form-group">
+                        <label class="form-control-label" htmlFor="input-lugar">Lugar</label>
+                        <input type="text" id="input-lugar" className="form-control" placeholder="Ingrese la direccion" value={this.state.lugar} onChange={this.LugarInputChange.bind(this)}/>
+                      </div>
+                    </div> 
+                  
+                    {/* <!--- Implementacion de google maps--> */}
+                    <div class="row">
+                      <div class="col">
+                        <div class="card border-0">
+                          <div id="map-default" class="map-canvas"  > <MapContainer></MapContainer></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col text-right">
+                     
+                    </div>
+                    <button type="submit" className="btn btn-lg btn-warning">Guardar Evento</button>
+                </form>
+ 
+                  <hr class="my-4" />
+                <form>
+                  <div class="card-body">
+                  <h6 class="heading-small text-muted mb-4">Informacion del evento</h6>
+                  <div class="pl-lg-4">
+               
+                    <div class="row">
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="form-control-label" for="label-evento">Evento</label>
+                            <select class="form-control" id="exampleFormControlSelect1">
+                            <option value="">San Marcos Evento</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="form-control-label"  for="label-localidad ">Localidad</label>
+                            <select class="form-control" id="exampleFormControlSelect1">
+                            <option>Oro</option>
+                            <option>Platino</option>
+                            <option>General</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="form-control-label" for="input-asientos">Asientos</label>
+                          <input type="text" id="input-asientos" class="form-control" required />
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="form-control-label" for="input-costo">Costo</label>
+                          <input type="number" id="input-costo" class="form-control" placeholder="Q."/>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                  </div>
+                  <button type="submit" className="btn btn-lg btn-warning">Guardar localidad</button> 
+                </form>
+                <div class="col text-right">
+                 
+                 
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+     
                 <footer className="footer pt-0">
                 </footer>
             </div>
-            
-          
+        </div>
         </div>
     )
 }

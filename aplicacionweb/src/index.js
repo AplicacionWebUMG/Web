@@ -6,6 +6,7 @@ import MapContainer from './components/GoogleMaps';
 import * as serviceWorker from './serviceWorker';
 import './includes/bootstrap';
 import App from './App';
+import Home from './components/Home';
 ReactDOM.render(<StaticSite />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
