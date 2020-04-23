@@ -135,7 +135,7 @@ import {
         </div>
       </div>
     </nav>
-      </div>
+     
         <Route path="/home" component={Home} />
         <Route path="/creareventos" component={CrearEventos}/>
         <Route path="/vereventos" component={ListEventos} />
@@ -144,9 +144,12 @@ import {
         <Route path="/reembolso" component={Reembolso} />
         <Route path="/historialpago" component={HistorialPagos} />
         <Route path="/usuarios" component={Usuarios} />
-           </div>
-           
+     
+      </div>
+      </div>
       </Router>
+     
+
         )
       }
       

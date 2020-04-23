@@ -129,7 +129,7 @@ render(){
                     <div class="row">
                       <div class="col-lg-3">
                         <div class="form-group">
-                          <label class="form-control-label" for="label-evento">Evento</label>
+                          <label class="form-control-label" htmlFor="label-evento">Evento</label>
                             <select class="form-control" id="exampleFormControlSelect1">
                             <option value="">San Marcos Evento</option>
                           </select>
@@ -137,7 +137,7 @@ render(){
                       </div>
                       <div class="col-lg-3">
                         <div class="form-group">
-                          <label class="form-control-label"  for="label-localidad ">Localidad</label>
+                          <label class="form-control-label"  htmlFor="label-localidad ">Localidad</label>
                             <select class="form-control" id="exampleFormControlSelect1">
                             <option>Oro</option>
                             <option>Platino</option>
@@ -147,13 +147,13 @@ render(){
                       </div>
                       <div class="col-lg-3">
                         <div class="form-group">
-                          <label class="form-control-label" for="input-asientos">Asientos</label>
+                          <label class="form-control-label" htmlFor="input-asientos">Asientos</label>
                           <input type="text" id="input-asientos" class="form-control" required />
                         </div>
                       </div>
                       <div class="col-lg-3">
                         <div class="form-group">
-                          <label class="form-control-label" for="input-costo">Costo</label>
+                          <label class="form-control-label" htmlFor="input-costo">Costo</label>
                           <input type="number" id="input-costo" class="form-control" placeholder="Q."/>
                         </div>
                       </div>

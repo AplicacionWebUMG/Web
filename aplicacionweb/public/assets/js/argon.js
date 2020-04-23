@@ -583,6 +583,7 @@ var NavbarCollapse = (function() {
 		  $('body').removeClass('nav-');
 			navbar_menu_visible = 0;
 			$('.bodyClick').remove();
+			console.log(navbar_menu_visible)
 
 		} else {
 
