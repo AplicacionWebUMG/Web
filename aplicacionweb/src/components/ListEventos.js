@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import StaticSite from './Router';
 
 import EliminarEvento from './EliminarEvento';
-
+import axios from 'axios';
 class ListEventos extends Component{
     
     constructor(...props){
@@ -23,6 +23,11 @@ class ListEventos extends Component{
          
     
 }
+deleteNote = async (noteId) => {
+    await axios.delete('https://rijhn09.pythonanywhere.com/evento/borrar/' + noteId);
+   
+}
+
     render(){
         return(
             <div>
@@ -34,7 +39,7 @@ class ListEventos extends Component{
         <div className="header-body">
           <div className="row align-items-center py-4">
             <div className="col-lg-6 col-7">
-              <h6 className="h2 text-white d-inline-block mb-0">Eventos Disponibles</h6>
+        <h6 className="h2 text-white d-inline-block mb-0">Eventos Disponibles </h6>
             </div>
           </div>
         </div>
@@ -76,7 +81,27 @@ class ListEventos extends Component{
                                                 <td>{events.fecha}</td>
                                                 <td>{events.hora}</td>
                                                 <td>{events.lugar}</td>
-                                                
+                                                <td>
+                                                <a href="#eliminar" role="button" class="btn btn-sm btn-danger" data-toggle="modal">Eliminar</a>
+                                                    <div id="eliminar" class="modal fade">
+                                                        <div class="modal-dialog">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                                </div>
+                                                                <div class="modal-body">
+                                                                    <p>¿Esta seguro de borrar este evento?</p>
+                                                                   
+                                                                    <p class="text-warning"><small>Si lo borras, nunca podrás recuperarlo.</small></p>
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                                                                    <button onClick={() => this.deleteNote(events.id)} type="submit" class="btn btn-warning" >Eliminar</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
                                                
                                                
                                                </tr>   
@@ -94,9 +119,6 @@ class ListEventos extends Component{
                                         </div>
                                     </div>
                                     
-                                  
-                        
-                
 
                 </div>
             </div>
@@ -104,7 +126,7 @@ class ListEventos extends Component{
         )
     }
 
-
+   
 }
 
 
