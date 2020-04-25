@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import CrearEventos from'./CrearEventos';
 =======
 import ListEventos from './ListEventos';
+import ListEventos from './ListEventos';
 >>>>>>> eaa135312f9e1c9d8eb71461d8882143ab7178b8
 class Eventos extends Component{
 

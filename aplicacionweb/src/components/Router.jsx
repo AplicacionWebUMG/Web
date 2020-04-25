@@ -28,6 +28,7 @@ import {
     Redirect,
     withRouter
   } from "react-router-dom";
+import ListUsuarios from './ListUsuarios';
 
   class StaticSite extends Component {
 
@@ -80,6 +81,7 @@ import {
         <Route path="/vereventos" component={ListEventos} />
         <Route path="/login" component={Login} />
         <Route path="/pagos" component={Pagos} />
+        <Route path="/users" component={ListUsuarios} />
            </div>
            
       </Router>

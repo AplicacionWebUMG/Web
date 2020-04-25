@@ -97,11 +97,14 @@ class ListEventos extends Component{
                                   
                         
                     )
-                })}
+                })
+                }
 
                 
             </div>
-            
+    
+
+          
         )
     }
 
