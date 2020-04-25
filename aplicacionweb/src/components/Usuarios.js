@@ -1,6 +1,25 @@
 import React, { Component } from 'react';
+import StaticSite from './Router';
 
 class Usuarios extends Component{
+  constructor(...props){
+    super(...props)
+    this.state={usuarios:[]}
+}
+componentDidMount(){
+    fetch('https://rijhn09.pythonanywhere.com/usuarios/', {
+    method: 'GET',
+    headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json' 
+        }
+    
+})
+           .then(response=>{return response.json()})
+          .then(usuarios =>{this.setState({usuarios: usuarios})})
+ 
+
+}
 
 render(){
     
@@ -38,22 +57,27 @@ render(){
                     <span aria-hidden="true">×</span>
                   </button>
                 </form>
-                <table class="table align-items-center table-flush">
+                <table className="table align-items-center table-flush">
                   <thead class="thead-light">
                     <tr>
-                      <th scope="col">Usuario</th>
+                      <th scope="col" >Usuario</th>
                       <th scope="col">Nombre</th>
                       <th scope="col">Correo</th>
                       <th scope="col">Acciones</th>
                     </tr>
                   </thead>
                   <tbody>
+                  {
+                     this.state.usuarios.map(user =>{
+                       return(
                     <tr>
+                   
                       <th scope="row">
-                       JuanCarlos
+                       <td>{user.username}</td>
                       </th> 
-                      <td>Juan Carlos</td>
-                      <td>jua@juan.com</td>
+                      <td>{user.first_name}</td>
+                      <td>{user.email}</td>
+                      
                       <td>
                         {/* <!-- Botón para editar--> */}
                         <a href="#editar" role="button" class="btn btn-sm btn-warning" data-toggle="modal">Editar</a>
@@ -122,6 +146,8 @@ render(){
                         
                       </td>
                     </tr>
+                       );
+                    })}
                   </tbody>
                 </table>
               </div>
