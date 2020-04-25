@@ -1,28 +1,28 @@
-import React, { Component } from 'react';
-import StaticSite from './Router';
+import React, { Component } from 'react'
+import axios from 'axios'
+import { Link } from 'react-router-dom'
 
-import EliminarEvento from './EliminarEvento';
+ class ListEventos extends Component {
 
-class ListEventos extends Component{
-    
-    constructor(...props){
-        super(...props)
-        this.state={eventos:[]}
+    state = {
+        notes: []
     }
-    componentDidMount(){
-        fetch('https://rijhn09.pythonanywhere.com/evento/mostrar/', {
-        method: 'GET',
-        headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json' 
-            }
-        
-    })
-        .then(response=>{return response.json()})
-        .then(eventos =>{this.setState({eventos: eventos})})
-         
-    
-}
+    async componentDidMount() {
+        this.getNotes();
+    }
+
+    getNotes = async () => {
+        const res = await axios.get('https://rijhn09.pythonanywhere.com/evento/mostrar/')
+        this.setState({
+         notes: res.data
+        });
+    }
+
+    deleteNote = async (noteId) => {
+        await axios.delete('https://rijhn09.pythonanywhere.com/evento/borrar/' + noteId);
+        this.getNotes();
+    }
+
     render(){
         return(
             <div>
@@ -65,19 +65,26 @@ class ListEventos extends Component{
                                            
                                             <tbody>
                                             {
-                     this.state.eventos.map(events =>{
+                      this.state.notes.map(note =>{
                         return( 
                                             <tr>
                                                 
                                                 <td>
-                                               {events.nombre}
+                                               {note.nombre}
                                                 </td> 
-                                                <td>{events.organizadores}</td>
-                                                <td>{events.fecha}</td>
-                                                <td>{events.hora}</td>
-                                                <td>{events.lugar}</td>
-                                                
-                                               
+                                                <td>{note.organizadores}</td>
+                                                <td>{note.fecha}</td>
+                                                <td>{note.hora}</td>
+                                                <td>{note.lugar}</td>
+                                                {/*Botones  */}
+                                                <center>
+                                                <Link to={`/update/${note.id}/${note.nombre}/${note.fecha}/${note.hora}/${note.lugar}/${note.estado}/${note.organizadores}`} className="btn btn-primary">
+                                                 Editar  
+                                                 </Link>
+                                                <Link  className="btn btn-danger" onClick={() => this.deleteNote(note.id)}>
+                                                 Borrar
+                                                </Link>
+                                                 </center>
                                                
                                                </tr>   
                                                 )
@@ -103,9 +110,5 @@ class ListEventos extends Component{
             
         )
     }
-
-
 }
-
-
 export default ListEventos;
