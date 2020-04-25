@@ -198,7 +198,24 @@ generarObjeto(){
     }
     return JSON.stringify(objeto);
 }
+onSubmit (e) {
+  fetch ('https://rijhn09.pythonanywhere.com/evento/crear', {
+      method: 'POST',
+      headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json' 
+          },
+      body: this.generarObjeto()
+  })
+  .then(res => res.json())
+  .then(res => {
+    if (res.success) {
+      alert('Creado.')
+      }
+  });
+  
 
+}
 
 }
 export default CrearEventos
