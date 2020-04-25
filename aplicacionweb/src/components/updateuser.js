@@ -105,9 +105,9 @@ export default class actualizaruser extends Component {
 
                         {/* boton guardar*/}
                         <center><button className="btn btn-primary">
-                            Guardar <i className="material-icons">
-                            refresh
-                        </i>
+                            Actualizar 
+                           
+                       
                         </button></center>
                     </form>
                 </div>
