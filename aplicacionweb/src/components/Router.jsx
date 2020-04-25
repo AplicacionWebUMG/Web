@@ -7,6 +7,7 @@ import Reembolso from './Reembolso';
 import HistorialPagos from './HistorialPagos';
 import Usuarios from './Usuarios';
 import actualizarevento from './update'
+import actualizaruser from './updateuser'
 import Login from './Login';
 
 import {
@@ -145,6 +146,7 @@ import {
         <Route path="/historialpago" component={HistorialPagos} />
         <Route path="/usuarios" component={Usuarios} />
         <Route  exact path="/update/:id/:nombre/:fecha/:hora/:lugar/:estado/:organizadores" component={actualizarevento} />
+        <Route exact path="/actualizar/:id/:primernombre/:segundonombre/:nombreusuario/:email" component={actualizaruser} />
      
       </div>
       </div>
