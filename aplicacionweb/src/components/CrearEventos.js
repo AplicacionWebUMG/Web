@@ -108,7 +108,7 @@ render(){
                       <div className="form-group">
                         <label className="form-control-label" htmlFor="input-lugar">Lugar</label>
                         <input id="lugar" className="form-control" placeholder="Inserte lugar" type="text" value={this.state.lugar} onChange={this.LugarInputChange.bind(this)}/>
-                      <Places datoLugar={this.datoLugar} />
+                    
                         
                       </div>
                     </div> 
