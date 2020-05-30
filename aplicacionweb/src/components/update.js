@@ -28,9 +28,15 @@ export default class actualizarevento extends Component {
             organizadores: this.state.organizadores
 
         };
-       await axios.put('https://rijhn09.pythonanywhere.com/evento/actualizar/'+ this.props.match.params.id, newNote);
+       await axios.put('https://rijhn09.pythonanywhere.com/evento/actualizar/'+ this.props.match.params.id, newNote,{
+        headers: {
+            'authorization':`Token ${global.SampleVar}`,
+             'Accept': 'application/json',
+             'Content-Type': 'application/json' 
+             },
+       });
     }
-    window.location.href = '/';
+    this.props.history.push(`/vereventos`)
 }
     onInputChange = (e) => {
         this.setState({

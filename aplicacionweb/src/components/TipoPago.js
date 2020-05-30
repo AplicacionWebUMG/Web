@@ -59,19 +59,26 @@ render(){
                     <tr>
                       <th scope="col">#</th>
                       <th scope="col">Evento</th>
+                         
                       <th scope="col">Tipo Pago</th>
                       <th scope="col">Acciones</th>
                     </tr>
                   </thead>
                   <tbody>
+
                     <tr>
                       <th scope="row">#</th> 
-                      <td>Evento</td>
+                      <td>Festival Gallo</td>
                       <td>Efectivo</td>
                       <td>
+                           
+                        
+            
+                        
+                                 
                         
                         {/* <!-- Botón para eliminar--> */}
-                        <a href="#eliminar" role="button" class="btn btn-sm btn-danger" data-toggle="modal">Quitar</a>
+                        <a href="#eliminar" role="button" class="btn btn-sm btn-danger" data-toggle="modal">Borrar</a>
                         <div id="eliminar" class="modal fade">
                             <div class="modal-dialog">
                                 <div class="modal-content">
@@ -88,9 +95,79 @@ render(){
                                 </div>
                             </div>
                         </div>
+                        
                       </td>
-                    </tr>
+                      </tr>
+                      <tr>
+                      <th scope="row">#</th> 
+                      <td>Cherry Eventos</td>
+                      <td>paypal</td>
+                      <td>
+                           
+                        
+            
+                        
+                                 
+                        
+                        {/* <!-- Botón para eliminar--> */}
+                        <a href="#eliminar" role="button" class="btn btn-sm btn-danger" data-toggle="modal">Borrar</a>
+                        <div id="eliminar" class="modal fade">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>¿Estas seguro que deseas quitar este elemento?</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                                        <button type="button" class="btn btn-warning" data-dismiss="modal">Quitar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                      </td>
+                      </tr>
+                      <tr>
+                      <th scope="row">#</th> 
+                      <td>Universo Eventos</td>
+                      <td>Tarjeta de credito</td>
+                      
+                      
+                      <td>
+                           
+                        
+            
+                        
+                                 
+                        
+                        {/* <!-- Botón para eliminar--> */}
+                        <a href="#eliminar" role="button" class="btn btn-sm btn-danger" data-toggle="modal">Borrapr</a>
+                        <div id="eliminar" class="modal fade">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>¿Estas seguro que deseas quitar este elemento?</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                                        <button type="button" class="btn btn-warning" data-dismiss="modal">Quitar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                      </td>
+                   
+                      </tr>
+
                   </tbody>
+                  
                 </table>
               </div>
             </div>

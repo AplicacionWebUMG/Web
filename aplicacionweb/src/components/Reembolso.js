@@ -41,13 +41,69 @@ render(){
                   </thead>
                   <tbody>
                     <tr>
-                      <th scope="row">Juan Carlos</th> 
+                      <th scope="row">Geremias Macario</th> 
                       <td>Festival Gallo</td>
                       <td>Q150.00</td>
                       <td>
 
                         {/* <!-- Botón para eliminar--> */}
-                        <a href="#eliminar" role="button" class="btn btn-sm btn-danger" data-toggle="modal">Aceptar</a>
+                        <a href="#eliminar" role="button" class="btn btn-sm btn-danger" data-toggle="modal">Editar</a>
+                        <a href="#eliminar" role="button" class="btn btn-sm btn-danger" data-toggle="modal">Borrar</a>
+                        <div id="eliminar" class="modal fade">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>¿Esta seguro de seguro que deseas realizar rembolso?</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                                        <button type="button" class="btn btn-warning" data-dismiss="modal">Rembolsar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      </td>
+                      </tr>
+                      <tr>
+                      <th scope="row">Madelin Monzon</th> 
+                      <td>Cherry Eventos</td>
+                      <td>Q200.00</td>
+                      <td>
+
+                        {/* <!-- Botón para eliminar--> */}
+                        <a href="#eliminar" role="button" class="btn btn-sm btn-danger" data-toggle="modal">Editar</a>
+                        <a href="#eliminar" role="button" class="btn btn-sm btn-danger" data-toggle="modal">Borrar</a>
+                        <div id="eliminar" class="modal fade">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>¿Esta seguro de seguro que deseas realizar rembolso?</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                                        <button type="button" class="btn btn-warning" data-dismiss="modal">Rembolsar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      </td>
+                      </tr>
+                      <tr>
+                      <th scope="row">Melody Castañon</th> 
+                      <td>Universo Eventos</td>
+                      <td>Q250.00</td>
+                      
+                      <td>
+
+                        {/* <!-- Botón para eliminar--> */}
+                        <a href="#eliminar" role="button" class="btn btn-sm btn-danger" data-toggle="modal">Editar</a>
+                        <a href="#eliminar" role="button" class="btn btn-sm btn-danger" data-toggle="modal">Borrar</a>
                         <div id="eliminar" class="modal fade">
                             <div class="modal-dialog">
                                 <div class="modal-content">

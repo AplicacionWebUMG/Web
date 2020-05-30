@@ -1,42 +1,86 @@
-import React, { Component } from 'react';
-import log from '../img/log.png';
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
-class Login extends Component{ 
-
-    constructor(...props){
-      super(...props)
-      
+export default class Login extends Component {
+    constructor()
+    {
+        super();
+        this.state={
+            username: null,
+            password: null,
+            login: false,
+            store: null
+        }
     }
- 
-render(){
-    return(
-        <div>
+     login()
+    {
+         fetch('https://rijhn09.pythonanywhere.com/login/',{
+           method:"POST",
+           body:JSON.stringify(this.state),
+           headers: {
+            'Accept': 'application/json, text/plain',
+            'Content-Type': 'application/json;charset=UTF-8'
+        },
+        }).then((response)=>{
+            response.json().then((result)=>{
+                console.warn("result",result);
+                localStorage.setItem('login',JSON.stringify({
+                    login:true,
+                }))
+                this.setState({
+                    token:result.token
+                })
+                
+                //const autorizacion=result.token
+                //alert(autorizacion)
+                if (this.state.token) {
+                    //alert('Bienvenido: '+this.state.username);   
+                    //this.props.navigation.navigate('Eventos',{nombre:this.state.pokemon})
+                
+                    this.props.history.push(`/mensaje/${this.state.username}/${this.state.token}`)
+                   
+                 }
+                 else
+                 {
+                     alert("Usuario no existe",);
+                 }
+            })
+        })
+        
+         
+        
+        
+        
+    }
+    
+    render() {
+        return (
+            
+            <div className="col-md-4 offset-md-3" >
+        <div className="card card-body">
+           <center> <h4>Login</h4></center>
            
-            <div className="container">
-      <div className="row">
-        <div className="col-sm-9 col-md-7 col-lg-5 mx-auto">
-          <div className="card card-signin my-5">
-            <div className="card-body">
-                <img className="mb-4" src={log} alt="logo" width="400" height="400"/>
-              <form className="form-signin">
-                <div className="form-label-group">
-                  <input type="text" class="form-control" placeholder="Usuario" required autofocus/>
-                </div>
-  
-                <div className="form-label-group">
-                  <input type="password" class="form-control" placeholder="Password" required/>
-
-                </div>
-                <button className="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Ingresar</button>
-              </form>
+                <center><div className="form-group">
+                    <input type="text" placeholder="Username" onChange={(event)=>{this.setState({username:event.target.value})}} />
+                </div></center>    
+                <center><div className="form-group">
+                    <input type="text" placeholder="Password" onChange={(event)=>{this.setState({password:event.target.value})}} />
+                </div></center> 
+                    
+                    
+                    <center>
+                        <Link  className="btn btn-danger" onClick={()=>{this.login()}}>
+                        Logearse
+                        </Link>
+                    </center>
+                    <center>
+                        <br/>
+                        <Link to={`/crearusuario`}>
+                        Sing Up 
+                        </Link>
+                    </center>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-        </div>
-
-    )
+            </div>
+        )
+    }
 }
-}
-export default Login

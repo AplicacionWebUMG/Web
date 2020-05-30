@@ -12,14 +12,28 @@ import { Link } from 'react-router-dom'
     }
 
     getNotes = async () => {
-        const res = await axios.get('https://rijhn09.pythonanywhere.com/evento/mostrar/')
+        const res = await axios.get('https://rijhn09.pythonanywhere.com/evento/mostrar/',
+        {
+            headers: {
+                'authorization':`Token ${global.SampleVar}`,
+                'Accept': 'application/json, text/plain',
+                'Content-Type': 'application/json;charset=UTF-8'
+            },
+        })
         this.setState({
          notes: res.data
         });
+        
     }
 
     deleteNote = async (noteId) => {
-        await axios.delete('https://rijhn09.pythonanywhere.com/evento/borrar/' + noteId);
+        await axios.delete('https://rijhn09.pythonanywhere.com/evento/borrar/' + noteId,{
+            headers: {
+                'authorization':`Token ${global.SampleVar}`,
+                 'Accept': 'application/json',
+                 'Content-Type': 'application/json' 
+                 },
+        });
         this.getNotes();
     }
 

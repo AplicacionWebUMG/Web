@@ -63,8 +63,20 @@ render(){
                   <tbody>
                     <tr>
                       <th scope="row">#</th> 
-                      <td>Evento</td>
-                      <td>Costo</td>
+                      <td>Festival Gallo</td>
+                      <td>Q.150.00</td>
+                      </tr>
+                      <tr>
+
+                      <th scope="row">#</th> 
+                      <td>Cherry Eventos</td>
+                      <td>Q.200.00</td>
+                      </tr>
+                      <tr>
+
+                      <th scope="row">#</th> 
+                      <td>Universo Eventos</td>
+                      <td>Q.250.00</td>
                       <td>
                       </td>
                     </tr>

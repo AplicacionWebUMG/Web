@@ -13,14 +13,26 @@ import { Link } from 'react-router-dom'
     }
 
     getNotes = async () => {
-        const res = await axios.get('https://rijhn09.pythonanywhere.com/usuarios/')
+        const res = await axios.get('https://rijhn09.pythonanywhere.com/usuarios/listar/',{
+          headers: {
+            'authorization':`Token ${global.SampleVar}`,
+            'Accept': 'application/json, text/plain',
+            'Content-Type': 'application/json;charset=UTF-8'
+        },
+        })
         this.setState({
          notes: res.data
         });
     }
 
     deleteNote = async (noteId) => {
-        await axios.delete('https://rijhn09.pythonanywhere.com/usuarios/' + noteId);
+        await axios.delete('https://rijhn09.pythonanywhere.com/usuarios/eliminar/' + noteId,{
+          headers: {
+            'authorization':`Token ${global.SampleVar}`,
+            'Accept': 'application/json, text/plain',
+            'Content-Type': 'application/json;charset=UTF-8'
+        },
+        });
         this.getNotes();
     }
 
@@ -85,29 +97,15 @@ render(){
                         {/* <!-- Botón para editar--> */}
                         <Link to={`/actualizar/${note.id}/${ note.first_name }/${ note.last_name }/${ note.username }/${ note.email }`} className="btn btn-primary">
                                     Editar
-                                   
-                                   </Link>
-                        {/* <!-- Botón para eliminar--> */}
-                        <a href="#eliminar" role="button" class="btn btn-sm btn-danger" data-toggle="modal">Eliminar</a>
-                        <div id="eliminar" class="modal fade">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <p>¿Esta seguro de borrar al usuario?</p>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
-                                        <Link  className="btn btn-danger" onClick={() => this.deleteNote(note.id)}>
-                                        Borrar
-                                        </Link>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
+                         </Link>
+                        {/* <!-- Botón para eliminar--> */}               
+                        <Link  className="btn btn-danger" onClick={() => this.deleteNote(note.id)}>
+                                      Borrar
+                         </Link>
+                                    
+                                
+                            
+                       
                       </td>
                     </tr>
                        );

@@ -202,6 +202,7 @@ onSubmit (e) {
   fetch ('https://rijhn09.pythonanywhere.com/evento/crear', {
       method: 'POST',
       headers: {
+         'authorization':`Token ${global.SampleVar}`,
           'Accept': 'application/json',
           'Content-Type': 'application/json' 
           },
@@ -214,7 +215,7 @@ onSubmit (e) {
       }
   });
   
-
+  this.props.history.push(`/vereventos`)
 }
 
 }

@@ -6,7 +6,7 @@ import TipoPago from './TipoPago';
 import Reembolso from './Reembolso';
 import HistorialPagos from './HistorialPagos';
 import Usuarios from './Usuarios';
-
+import Bienvenida from'./asin';
 import Localidades from './Localidades';
 
 
@@ -14,7 +14,7 @@ import actualizarevento from './update'
 import actualizaruser from './updateuser'
 
 import Login from './Login';
-
+import crearuser from './crearusuario'
 import {
     BrowserRouter as Router,
     Switch,
@@ -142,7 +142,7 @@ import {
       </div>
     </nav>
      
-        <Route path="/home" component={Home} />
+        <Route path="/home/:token" component={Home} />
         <Route path="/creareventos" component={CrearEventos}/>
         <Route path="/vereventos" component={ListEventos} />
         <Route path="/login" component={Login} />
@@ -150,9 +150,10 @@ import {
         <Route path="/reembolso" component={Reembolso} />
         <Route path="/historialpago" component={HistorialPagos} />
         <Route path="/usuarios" component={Usuarios} />
+        <Route path="/crearusuario" component={crearuser} />
         <Route  exact path="/update/:id/:nombre/:fecha/:hora/:lugar/:estado/:organizadores" component={actualizarevento} />
         <Route exact path="/actualizar/:id/:primernombre/:segundonombre/:nombreusuario/:email" component={actualizaruser} />
-     
+        <Route exact path="/mensaje/:nombre/:token" component={Bienvenida} />
       </div>
       </div>
       </Router>

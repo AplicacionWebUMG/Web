@@ -26,9 +26,15 @@ export default class actualizaruser extends Component {
             password:          this.state.password,
         };
         const id = this.props.match.params.id;
-       await axios.put('https://rijhn09.pythonanywhere.com/usuarios/'+id+'/',newNote);
+       await axios.put('https://rijhn09.pythonanywhere.com/usuarios/actualizar/'+id, newNote,{
+        headers: {
+            'authorization':`Token ${global.SampleVar}`,
+             'Accept': 'application/json',
+             'Content-Type': 'application/json' 
+             },
+       });
     }
-    window.location.href = '/';
+    this.props.history.push(`/usuarios`)
 }
     onInputChange = (e) => {
         this.setState({

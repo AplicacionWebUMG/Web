@@ -1,12 +1,25 @@
 import React, { Component } from 'react';
 import StaticSite from './Router'
-
+import { Link } from 'react-router-dom'
 class Home extends Component{
-
+  constructor(props) {
+    super(props);
+    this.state = {
+        Token: this.props.match.params.token,
+    }
+    const { match: { params } } = this.props;
+  console.log(params.token)
+}
+componentDidMount(){
+  var token =this.props.match.params.token;
+  var token=JSON.stringify(token)
+  let Token=JSON.parse(token)
+  global.SampleVar=Token
+  console.log(Token)
+}
 render(){
     return(
         <div >
-      
           <div className="header">
             <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
               <div className="carousel-inner">
@@ -27,6 +40,7 @@ render(){
               <a className="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
                 <span className="carousel-control-next-icon" aria-hidden="true"></span>
                 <span className="sr-only">Next</span>
+                
               </a>
             </div>
           </div>
