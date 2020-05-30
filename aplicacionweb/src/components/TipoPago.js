@@ -144,7 +144,7 @@ render(){
                                  
                         
                         {/* <!-- Botón para eliminar--> */}
-                        <a href="#eliminar" role="button" class="btn btn-sm btn-danger" data-toggle="modal">Borrapr</a>
+                        <a href="#eliminar" role="button" class="btn btn-sm btn-danger" data-toggle="modal">Borrar</a>
                         <div id="eliminar" class="modal fade">
                             <div class="modal-dialog">
                                 <div class="modal-content">
