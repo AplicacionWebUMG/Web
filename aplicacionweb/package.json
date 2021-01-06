@@ -7,7 +7,7 @@
     "@testing-library/react": "^9.4.1",
     "@testing-library/user-event": "^7.2.1",
     "argon-dashboard-react": "1.1.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "bootstrap": "^4.4.1",
     "google-map-react": "^1.1.7",
     "google-maps-react": "^2.0.2",
